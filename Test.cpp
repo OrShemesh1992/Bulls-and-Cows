@@ -14,6 +14,9 @@ using namespace std;
 #include "DummyGuessers.hpp"
 #include "SmartGuesser.hpp"
 #include "badkan.hpp"
+#include "calculate.hpp"
+#include "Guesser.hpp"
+#include "Chooser.hpp"
 #define COMMA ,
 
 using namespace bullpgia;

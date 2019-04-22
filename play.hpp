@@ -10,6 +10,7 @@
 #include "Guesser.hpp"
 #include "DummyChoosers.hpp"
 #include "SmartGuesser.hpp"
+#include "calculate.hpp"
 namespace bullpgia {
 	/**
 	 * Run a game of bull-pgia.

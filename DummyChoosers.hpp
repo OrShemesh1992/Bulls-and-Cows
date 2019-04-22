@@ -1,5 +1,7 @@
 #pragma once
 #include "Chooser.hpp"
+#include "calculate.hpp"
+
 using std::string;
 
 /**
