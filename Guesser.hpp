@@ -1,11 +1,11 @@
 #pragma once
 #include <string>
 #include "calculate.hpp"
+
 using std::string;
 namespace bullpgia {
 
 class Guesser {
-private:
 
 public:
 string replay;

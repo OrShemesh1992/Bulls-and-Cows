@@ -1,6 +1,10 @@
 
 #include <string>
-#include <iostream>
+#include "iostream"
 using namespace std;
+namespace bullpgia {
+string calculateBullAndPgia(string choice,string guess){
+    return"";
+}
 
-std::string calculateBullAndPgia(string choice,string guess);
+}

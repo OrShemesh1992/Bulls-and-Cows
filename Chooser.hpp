@@ -2,6 +2,7 @@
 #include <string>
 #include "calculate.hpp"
 
+
 using std::string;
 namespace bullpgia {
 
