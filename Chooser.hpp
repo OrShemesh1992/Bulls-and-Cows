@@ -1,6 +1,7 @@
 #pragma once
-#include <string>
-#include "calculate.hpp"
+#include <iostream>
+#include <stdlib.h>
+using std::string;
 
 
 using std::string;

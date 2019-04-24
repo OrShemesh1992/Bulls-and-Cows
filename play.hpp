@@ -8,9 +8,7 @@
 
 #include "Chooser.hpp"
 #include "Guesser.hpp"
-#include "DummyChoosers.hpp"
-#include "SmartGuesser.hpp"
-#include "calculate.hpp"
+
 namespace bullpgia {
 	/**
 	 * Run a game of bull-pgia.
@@ -23,5 +21,4 @@ namespace bullpgia {
 	 *     then the return value is maxTurns+1.
 	 */
 	uint play(Chooser& chooser, Guesser& guesser, uint length, uint maxTurns);
-	uint play(RandomChooser& Rchooser,SmartGuesser& smarty, uint length, uint maxTurns);
 }

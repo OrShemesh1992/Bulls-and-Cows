@@ -8,12 +8,6 @@
 #include "play.hpp"
 #include "calculate.hpp"
 #include <string>
-#include "Guesser.hpp"
-#include "Chooser.hpp"
-#include "DummyChoosers.hpp"
-#include "DummyGuessers.hpp"
-#include "SmartGuesser.hpp"
-
 using std::string;
 
 namespace bullpgia {

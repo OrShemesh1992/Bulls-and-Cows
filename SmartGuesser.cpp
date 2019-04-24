@@ -1,17 +1,10 @@
-#include "Guesser.hpp"
-#include "calculate.hpp"
+
+#include "SmartGuesser.hpp"
 #include <string>
-//using std::string;
-namespace bullpgia {
-class SmartGuesser : public bullpgia :: Guesser{
-public:
-  void learn(string reply) override{}
-  void startNewGame(uint length) override{}
-   string guess() override{
-    return "";}
+using std::string;
 
-};
+string bullpgia::SmartGuesser::guess() {
+
+
+return "";
 }
-
-
-

@@ -1,15 +1,21 @@
- #pragma once
+#pragma once
 #include "Guesser.hpp"
 #include "calculate.hpp"
-#include <string>
-#include "Chooser.hpp"
-//using std::string;
+
+
 namespace bullpgia {
 class SmartGuesser : public bullpgia :: Guesser{
-public:
-  void learn(string reply) override;
-   void startNewGame(uint length) override;
-   string guess() override;
+private:
 
+  string s;
+  int place;
+
+
+public:
+      SmartGuesser(){//default
+        s = "0000";
+        place = 0;
+      }
+string guess() override;
 };
 }

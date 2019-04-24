@@ -1,17 +1,24 @@
 #pragma once
-#include <string>
-#include "calculate.hpp"
-
+#include <iostream>
+#include <stdlib.h>
+using namespace std;
 using std::string;
+
 namespace bullpgia {
 
-class Guesser {
+
+class Guesser{
 
 public:
-string replay;
-uint length;
-virtual void learn(string reply);
- virtual void startNewGame(uint length);
-virtual string guess()=0;
+
+  unsigned  int length; //length
+  int Bull;
+  int Pgia;
+
+	virtual string guess() = 0;
+        virtual void startNewGame(uint length) {
+            length=length;
+        };
+        virtual void learn(string results) {};
 };
 }

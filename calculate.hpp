@@ -1,9 +1,7 @@
-
+#pragma once
 #include <string>
 #include <iostream>
-#include "Guesser.hpp"
-
-using namespace std;
+using std::string;
 
 namespace bullpgia {
 
