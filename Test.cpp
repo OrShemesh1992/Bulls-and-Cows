@@ -66,6 +66,7 @@ ConstantChooser c1234{"1234"}, c12345{"12345"}, c9999{"9999"};
 																for (uint i=0; i<100; ++i) {
 																								testcase.CHECK_EQUAL(play(randy3, smarty3, 1, 100)<=40, true); // smarty should always win in at most 10 turns!
 																}
+																
 																testcase.setname("Test CalculateBull Succes")
 																.CHECK_OUTPUT(calculateBullAndPgia("123456789","123456789"),"9,0") // 9 bull 0 pgia
 																.CHECK_OUTPUT(calculateBullAndPgia("123","321"),"1,2")//2 pgia 1 bull
