@@ -87,7 +87,7 @@ ConstantChooser c1234{"1234"}, c12345{"12345"}, c9999{"9999"};
 																.CHECK_OUTPUT(calculateBullAndPgia("123", "102"), "1,1") // 1 bull 1 pgia
 																.CHECK_OUTPUT(calculateBullAndPgia("123", "12"), "2,0") // 2 bull 0 pgia
 																.CHECK_OUTPUT(calculateBullAndPgia("123", "045"), "0,0") // 0 bull 0 pgia
-																.CHECK_OUTPUT(calculateBullAndPgia("123", "321"), "0,3") // 0 bull 3 pgia
+																.CHECK_OUTPUT(calculateBullAndPgia("123", "321"), "1,2") // 1 bull 2 pgia
 																.CHECK_OUTPUT(calculateBullAndPgia("2222","22222"),"4,0")//4 bull 0 pgia
 																.CHECK_OUTPUT(calculateBullAndPgia("930","33"), "1,0")//1 bull 0 pgia
 																.CHECK_OUTPUT(calculateBullAndPgia("42","4"),"1,0")//1 bull 0 pgia
