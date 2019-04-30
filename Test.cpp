@@ -23,13 +23,13 @@ using namespace bullpgia;
 
 int main() {
 
-								badkan::TestCase testcase;
-								int grade=0;
-								int signal = setjmp(badkan::longjmp_buffer);
-								if (signal == 0) {
+badkan::TestCase testcase;
+int grade=0;
+int signal = setjmp(badkan::longjmp_buffer);
+if (signal == 0) {
 
 																// BASIC TESTS - DO NOT CHANGE
-																ConstantChooser c1234{"1234"}, c12345{"12345"}, c9999{"9999"};
+ConstantChooser c1234{"1234"}, c12345{"12345"}, c9999{"9999"};
 																ConstantGuesser g1234{"1234"}, g12345{"12345"}, g9999{"9999"};
 
 																testcase.setname("Calculate bull and pgia")
@@ -83,6 +83,13 @@ int main() {
 																.CHECK_OUTPUT(calculateBullAndPgia("68","2"),"0,0")//0 bull 0 pgia
 																.CHECK_OUTPUT(calculateBullAndPgia("1234","421"),"1,2") //1 bull 2 pgia
 																;
+																//Naomi and Or test:
+testcase.setname("Play with smart guesser");
+    ConstantChooser c1111{"1111"}, c1122{"1122"}, c1212{"1212"};
+		SmartGuesser smarty;
+		testcase.CHECK_EQUAL(calculateBullAndPgia("1111", "1234"), "1,0") 
+		.CHECK_EQUAL(calculateBullAndPgia("1234", "1111"), "1,0")  
+		.CHECK_EQUAL(calculateBullAndPgia("1111", "1234"), "1,0")  
 
 
 
