@@ -7,6 +7,6 @@ void bullpgia::Guesser::learn(string results)
           string pgia = results.substr(0, results.find(delimiter));
           string bull = results.substr(results.find(delimiter)+1);
 
-          this->countPgia = stoi(pgia);
-          this->countBull = stoi(bull);
+          this->Pgia = stoi(pgia);
+          this->Bull = stoi(bull);
 }

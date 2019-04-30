@@ -2,8 +2,8 @@
 #include "SmartGuesser.hpp"
 #include <string>
 using std::string;
-
-string bullpgia::SmartGuesser::guess() {
+using namespace bullpgia;
+string SmartGuesser::guess() {
 
 
 return "";

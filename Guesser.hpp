@@ -11,9 +11,9 @@ class Guesser{
 
 public:
 
-  unsigned  int length; //length
-  int Bull;
-  int Pgia;
+ unsigned  int length; //length
+  // int Bull;
+  // int Pgia;
 
 	virtual string guess() = 0;
         virtual void startNewGame(uint length) {
