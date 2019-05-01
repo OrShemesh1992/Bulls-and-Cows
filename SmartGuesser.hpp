@@ -6,16 +6,22 @@
 namespace bullpgia {
 class SmartGuesser : public bullpgia :: Guesser{
 private:
+  int Bull;
+  int Pgia;
+  int Index;
+  string * _guess = new string[10];
+  int * choice = new int [10];
+  string * allOption;
 
-  string s;
-  int place;
-
-
+  string str;
 public:
-      SmartGuesser(){//default
-        s = "0000";
-        place = 0;
-      }
+
 string guess() override;
+void learn(string results) override;
+void startNewGame(uint length) override;
+
+SmartGuesser();
+string algo_short();
+string algo_long();
 };
 }

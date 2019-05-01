@@ -23,7 +23,6 @@ string calculateBullAndPgia(string choice,string guess){
                         }
                 }
         }
-      //  cout<<'\n'<<bull<<" "<<pgia<<endl;
         return to_string(bull)+","+to_string(pgia);
 }
 }
