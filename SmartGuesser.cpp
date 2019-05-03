@@ -16,27 +16,26 @@ string SmartGuesser::guess() {
         std::list<std::string>::iterator it = AllOption.begin();
         if(AllOption.size()>1) {
                 std::advance(it, rand()%(AllOption.size()-1));
+                this->Help_guess = *it;
+                std::cout << Help_guess << '\n';
         }
-        this->Help_guess = *it;
         return Help_guess;
 }
-
 void SmartGuesser::startNewGame(uint length) {
         AllOption.clear();
         this->length=length;
         buildList();
 }
 
-void SmartGuesser::buildList(){
+ void SmartGuesser::buildList(){
         int size= pow(10,length);
         for (size_t i = 0; i < size; i++) {
                 stringstream stream;
                 stream << setw(length) << setfill('0') << i;  //http://www.cplusplus.com/reference/iomanip/setfill/
                 string s = stream.str();
-
-                        AllOption.push_front(s); //http://www.cplusplus.com/reference/list/list/insert/
+                AllOption.push_front(s); //http://www.cplusplus.com/reference/list/list/insert/
         }
-}
+ }
 
 void SmartGuesser::removeFromList(string results){
         list<string>::iterator itr;
