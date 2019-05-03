@@ -9,7 +9,7 @@ namespace bullpgia {
 
 class Guesser {
 public:
-unsigned int length=4;   //length
+unsigned int length;   //length
 string bull_pgia; //[Bull,Pgia]
 
 

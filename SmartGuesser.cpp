@@ -1,82 +1,60 @@
 
 #include "SmartGuesser.hpp"
+#include <iostream>
+#include <iomanip>
+#include <sstream>
+#include <math.h>
 #include <string>
 using std::string;
+using namespace std;
 using namespace bullpgia;
 
-string SmartGuesser::guess() {
-        string ans;
-        if(this->length <= 4) {
-                ans = algo_short();
-        } else{
-                ans = algo_long();
-        }
-        return ans;
-}
 
-SmartGuesser::SmartGuesser(){
-        for (size_t i = 0; i < 10; i++) {
-                for (size_t j = 0; j < length; j++) {
-                        this->_guess[i]+=to_string(i);
-                }
+
+
+string SmartGuesser::guess() {
+        std::list<std::string>::iterator it = AllOption.begin();
+        if(AllOption.size()>1) {
+                std::advance(it, rand()%(AllOption.size()-1));
         }
-        this->Index=0;
-        this->Bull = 0;
-        this->Pgia = 0;
+        this->Help_guess = *it;
+        return Help_guess;
 }
 
 void SmartGuesser::startNewGame(uint length) {
+        AllOption.clear();
         this->length=length;
-};
+        buildList();
+}
+
+void SmartGuesser::buildList(){
+        int size= pow(10,length);
+        for (size_t i = 0; i < size; i++) {
+                stringstream stream;
+                stream << setw(length) << setfill('0') << i;  //http://www.cplusplus.com/reference/iomanip/setfill/
+                string s = stream.str();
+
+                        AllOption.push_front(s); //http://www.cplusplus.com/reference/list/list/insert/
+        }
+}
+
+void SmartGuesser::removeFromList(string results){
+        list<string>::iterator itr;
+        for(itr = AllOption.begin(); itr != AllOption.end();)
+        {
+                string back=calculateBullAndPgia(*itr,Help_guess);
+                if(back.compare(results)!=0) {
+                        itr=AllOption.erase(itr);
+                }
+                else{
+                        ++itr;
+                }
+        }
+}
+
 
 void SmartGuesser::learn(string results)
+
 {
-        string delimiter = ",";
-        string pgia = results.substr(0, results.find(delimiter));
-        string bull = results.substr(results.find(delimiter)+1);
-
-        this->Pgia = stoi(pgia);
-        this->Bull = stoi(bull);
-
-        if(this->Index<=10){
-        choice[this->Index]=this->Pgia+this->Bull;
-        }
-
-}
-
-string SmartGuesser::algo_short(){
-
-if(this->Index<=10){
-return this->_guess[this->Index++];
-}else{
-
-for (size_t i = 0; i < 10; i++) {
-  cout<< choice[i]<<endl;
-}
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        return "1234";
-}
-string SmartGuesser::algo_long(){
-
-
-
-        return "1234";
+        removeFromList(results);
 }
