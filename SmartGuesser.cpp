@@ -25,16 +25,12 @@ string SmartGuesser::guess() {
         else if(AllOption.size()==1){
                 this->Help_guess = *AllOption.begin();
         }
-       
-        std::cout << Help_guess << '\n';
-
         return Help_guess;
 }
 void SmartGuesser::startNewGame(uint length) {
         AllOption.clear();
         this->length=length;
         buildList();
-        cout<<"bdika"<<endl;
 }
 
  void SmartGuesser::buildList(){
