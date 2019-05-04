@@ -14,17 +14,27 @@ using namespace bullpgia;
 
 string SmartGuesser::guess() {
         std::list<std::string>::iterator it = AllOption.begin();
+         if(AllOption.size()==0){
+              buildList();
+                
+        }
         if(AllOption.size()>1) {
                 std::advance(it, rand()%(AllOption.size()-1));
                 this->Help_guess = *it;
-                std::cout << Help_guess << '\n';
         }
+        else if(AllOption.size()==1){
+                this->Help_guess = *AllOption.begin();
+        }
+       
+        std::cout << Help_guess << '\n';
+
         return Help_guess;
 }
 void SmartGuesser::startNewGame(uint length) {
         AllOption.clear();
         this->length=length;
         buildList();
+        cout<<"bdika"<<endl;
 }
 
  void SmartGuesser::buildList(){
@@ -49,6 +59,7 @@ void SmartGuesser::removeFromList(string results){
                         ++itr;
                 }
         }
+      this-> AllOption.remove(Help_guess);
 }
 
 
