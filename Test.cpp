@@ -70,7 +70,7 @@ ConstantChooser c1234{"1234"}, c12345{"12345"}, c9999{"9999"};
 																testcase.setname("Test CalculateBull Succes")
 																.CHECK_OUTPUT(calculateBullAndPgia("123456789","123456789"),"9,0") // 9 bull 0 pgia
 																.CHECK_OUTPUT(calculateBullAndPgia("123","321"),"1,2")//2 pgia 1 bull
-																.CHECK_OUTPUT(calculateBullAndPgia("123456789","12345678"),"8,0") // 8 bull 0 pgia
+																.CHECK_OUTPUT(calculateBullAndPgia("123456789","123456780"),"8,0") // 8 bull 0 pgia
 																.CHECK_OUTPUT(calculateBullAndPgia("123","321"),"1,2")//1 bull 2 pgia
 																.CHECK_OUTPUT(calculateBullAndPgia("1234","1204"),"3,0") // 3 bull 0 pgia
 																.CHECK_OUTPUT(calculateBullAndPgia("7777","0000"),"0,0")// 0 bull 0 pgia
@@ -80,24 +80,24 @@ ConstantChooser c1234{"1234"}, c12345{"12345"}, c9999{"9999"};
 																.CHECK_OUTPUT(calculateBullAndPgia("5555", "4445"), "1,0") // 1 bull 0 pgia
 																.CHECK_OUTPUT(calculateBullAndPgia("5749", "5749"), "4,0") // 4 bull 0 pgia
 																.CHECK_OUTPUT(calculateBullAndPgia("5749", "5479"), "2,2") // 2 bull 2 pgia
-																.CHECK_OUTPUT(calculateBullAndPgia("15", "1"), "1,0") // 1 bull 0 pgia
+																.CHECK_OUTPUT(calculateBullAndPgia("15", "10"), "1,0") // 1 bull 0 pgia
 																.CHECK_OUTPUT(calculateBullAndPgia("14", "41"), "0,2") // 0 bull 2 pgia
 																.CHECK_OUTPUT(calculateBullAndPgia("15", "15"), "2,0") // 2 bull 0 pgia
 																.CHECK_OUTPUT(calculateBullAndPgia("8", "5"), "0,0") // 0 bull 0 pgia
 																.CHECK_OUTPUT(calculateBullAndPgia("8", "8"), "1,0") // 1 bull 0 pgia
 																.CHECK_OUTPUT(calculateBullAndPgia("123", "102"), "1,1") // 1 bull 1 pgia
-																.CHECK_OUTPUT(calculateBullAndPgia("123", "12"), "2,0") // 2 bull 0 pgia
+																.CHECK_OUTPUT(calculateBullAndPgia("123", "120"), "2,0") // 2 bull 0 pgia
 																.CHECK_OUTPUT(calculateBullAndPgia("123", "045"), "0,0") // 0 bull 0 pgia
 																.CHECK_OUTPUT(calculateBullAndPgia("123", "321"), "1,2") // 1 bull 2 pgia
-																.CHECK_OUTPUT(calculateBullAndPgia("2222","22222"),"4,0")//4 bull 0 pgia
-																.CHECK_OUTPUT(calculateBullAndPgia("930","33"), "1,0")//1 bull 0 pgia
-																.CHECK_OUTPUT(calculateBullAndPgia("42","4"),"1,0")//1 bull 0 pgia
-																.CHECK_OUTPUT(calculateBullAndPgia("111","1010"),"2,0")//2 bull 0 pgia
-							//									.CHECK_OUTPUT(calculateBullAndPgia("123","31"),"0,2")//0 bull 2 pgia
-							//									.CHECK_OUTPUT(calculateBullAndPgia("71","1"),"0,1")//0 bull 1 pgia
-																.CHECK_OUTPUT(calculateBullAndPgia("2341324","98763"),"1,0")//1 bull 0 pgia
-																.CHECK_OUTPUT(calculateBullAndPgia("68","2"),"0,0")//0 bull 0 pgia
-															.CHECK_OUTPUT(calculateBullAndPgia("1234","421"),"1,2"); //1 bull 2 pgia
+																.CHECK_OUTPUT(calculateBullAndPgia("22222","22222"),"5,0")//4 bull 0 pgia
+																.CHECK_OUTPUT(calculateBullAndPgia("930","338"), "1,0")//1 bull 0 pgia
+																.CHECK_OUTPUT(calculateBullAndPgia("42","40"),"1,0")//1 bull 0 pgia
+																.CHECK_OUTPUT(calculateBullAndPgia("111","101"),"2,0")//2 bull 0 pgia
+																.CHECK_OUTPUT(calculateBullAndPgia("123","310"),"0,2")//0 bull 2 pgia
+																.CHECK_OUTPUT(calculateBullAndPgia("71","10"),"0,1")//0 bull 1 pgia
+																.CHECK_OUTPUT(calculateBullAndPgia("2341324","9876300"),"1,0")//1 bull 0 pgia
+																.CHECK_OUTPUT(calculateBullAndPgia("68","92"),"0,0")//0 bull 0 pgia
+															.CHECK_OUTPUT(calculateBullAndPgia("1234","4214"),"2,1"); //1 bull 2 pgia
 
 
 											ConstantChooser  c111111{"111111"}, c12{"12"},c334{"334"},c0{"0"},c8989898989{"8989898989"},c1{"1"},c98{"98"},c232323{"232323"},c567{"567"};

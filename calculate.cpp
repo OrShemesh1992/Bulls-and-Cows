@@ -8,10 +8,7 @@ string calculateBullAndPgia(string choice,string guess){
 
         int bull=0;
         int pgia=0;
-        int length  =min(choice.length(),guess.length());
-        if(choice.length() !=guess.length()){
-                return "0,0";
-        }
+        int length  =choice.length();
         for (size_t i = 0; i < length; i++) {
                 if(choice.at(i)==guess.at(i)) {
                         bull++;
