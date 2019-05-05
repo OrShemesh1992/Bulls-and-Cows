@@ -16,7 +16,7 @@ string bull_pgia; //[Bull,Pgia]
 
 virtual string guess() = 0;
 virtual void startNewGame(uint length) {
-        length=length;
+      this-> length=length;
 };
 virtual void learn(string results) {
         this->bull_pgia = results;

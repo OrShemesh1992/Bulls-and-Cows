@@ -11,7 +11,7 @@ private:
   std::string Help_guess;
 
 public:
-
+//void clearAllOption();
 string guess() override;
 void learn(string results) override;
 void startNewGame(uint length) override;

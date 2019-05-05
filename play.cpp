@@ -14,6 +14,7 @@ namespace bullpgia {
 	uint play(Chooser& chooser, Guesser& guesser, uint length, uint maxTurns) {
 		const uint TECHNICAL_VICTORY_TO_GUESSER = 0;
 		const uint TECHNICAL_VICTORY_TO_CHOOSER = maxTurns+1;
+		cout << "start play" << endl;
 
 		string choice = chooser.choose(length);
 		if (choice.length()!=length)       // Illegal choice
@@ -21,6 +22,7 @@ namespace bullpgia {
 		guesser.startNewGame(length);  // tell the guesser that a new game starts now
 		uint indexOfTurn;
 		for (indexOfTurn=0; indexOfTurn<maxTurns; ++indexOfTurn) {
+			cout << "indexOfTurn=" << indexOfTurn << endl;
 			string guess = guesser.guess();
 			if (guess.length()!=length)  // Illegal guess
 				return TECHNICAL_VICTORY_TO_CHOOSER;

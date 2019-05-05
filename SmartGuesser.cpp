@@ -15,8 +15,7 @@ using namespace bullpgia;
 string SmartGuesser::guess() {
         std::list<std::string>::iterator it = AllOption.begin();
          if(AllOption.size()==0){
-              buildList();
-                
+              buildList();       
         }
         if(AllOption.size()>1) {
                 std::advance(it, rand()%(AllOption.size()-1));
@@ -32,6 +31,15 @@ void SmartGuesser::startNewGame(uint length) {
         this->length=length;
         buildList();
 }
+// void SmartGuesser::clearAllOption(){
+//          list<string>::iterator itr;
+//         list<string>::iterator temp;
+//         for(itr = this->AllOption.begin(); itr != AllOption.end();){
+//           temp=itr;
+//           itr++;
+//           delete temp;
+//         }
+// }
 
  void SmartGuesser::buildList(){
         int size= pow(10,length);
