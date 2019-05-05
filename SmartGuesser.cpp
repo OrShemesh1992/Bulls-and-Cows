@@ -31,15 +31,6 @@ void SmartGuesser::startNewGame(uint length) {
         this->length=length;
         buildList();
 }
-// void SmartGuesser::clearAllOption(){
-//          list<string>::iterator itr;
-//         list<string>::iterator temp;
-//         for(itr = this->AllOption.begin(); itr != AllOption.end();){
-//           temp=itr;
-//           itr++;
-//           delete temp;
-//         }
-// }
 
  void SmartGuesser::buildList(){
         int size= pow(10,length);
