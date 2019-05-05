@@ -7,7 +7,7 @@ string calculateBullAndPgia(string choice,string guess){
         int bull = 0;
         int pgia = 0;
         int num[10] = {0};
-        for(int i=0; i<choice.length();; i++)
+        for(int i=0; i<choice.length(); i++)
         {
                 if(choice.at(i) == guess.at(i))
                 {
